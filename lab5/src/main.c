@@ -78,12 +78,16 @@ ISR(TIMER1_OVF_vect)
         // WRITE YOUR CODE HERE
         uart_putc(value);
         uart_puts("\t");
+        uart_puts("\x1b[4;31m");
         itoa(value,string,2);
         uart_puts(string);
+        uart_puts("\x1b[4;0m");
 
+        uart_puts("\x1b[4;33m");
         uart_puts("\t");
         itoa(value,string,10);
         uart_puts(string);
+        uart_puts("\x1b[4;0m");
 
 
         uart_puts("\x1b[4;32m");
