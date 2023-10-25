@@ -44,6 +44,7 @@
  **********************************************************************/
 int main(void)
 {
+  
     // Initialize display
     lcd_init(LCD_DISP_ON_CURSOR);
 
@@ -162,6 +163,7 @@ ISR(TIMER2_OVF_vect)
         lcd_gotoxy(2, 0);
         lcd_puts(string);
         */
+
     }
     // Else do nothing and exit the ISR
 }
